@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web.Http;
+using System.Web.Http.Results;
 using LessComplexWebApi.Models;
 
 namespace LessComplexWebApi.Controllers
@@ -12,7 +15,7 @@ namespace LessComplexWebApi.Controllers
 
         // GET /api/ducks/findDuck
         [HttpGet]
-        [Route("{name}", Name = "findDuck")]
+        [Route("findDuck/{name}", Name = "findDuck")]
         public IHttpActionResult FindDuck(string name)
         {
             var foundDuck = Ducks.FirstOrDefault(b => b.Name == name);
@@ -35,14 +38,44 @@ namespace LessComplexWebApi.Controllers
             return CreatedAtRoute("findDuck", new {name = bird.Name}, bird);
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody] string value)
+        //api/ducks/update?id=5
+        [HttpPut]
+        [Route("{id}", Name = "update")]
+        public IHttpActionResult Put(int id, [FromBody] Duck bird)
         {
+            if (id != bird.Id)
+            {
+                return BadRequest(string.Format("The id: {0} is different from expected", id));
+            }
+            var foundDuck = Ducks.FirstOrDefault(b => b.Id == id);
+            if (foundDuck == null)
+            {
+                return NotFound();
+            }
+            try
+            {
+                Ducks.Remove(foundDuck);
+                Ducks.Add(bird);
+            }
+            catch (Exception exception)
+            {
+                return InternalServerError(exception);
+            }
+
+            return Ok("The duck has been updated");
         }
 
-        // DELETE api/values/5
-        public void Delete(int id)
+        // DELETE api/ducks/delete
+        [HttpDelete]
+        [Route("delete/{id}", Name = "delete")]
+        public IHttpActionResult Delete(int id)
         {
+            var foundDuck = Ducks.FirstOrDefault(d => d.Id == id);
+            if (foundDuck == null)
+                return NotFound();
+            Ducks.Remove(foundDuck);
+            return Ok("The duck has been deleted");
         }
+
     }
 }
