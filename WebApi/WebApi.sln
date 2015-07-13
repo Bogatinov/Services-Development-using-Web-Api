@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstWebApi2", "MyFirstWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessComplexWebApi", "LessComplexWebApi\LessComplexWebApi.csproj", "{091B48A1-2F1F-485C-9865-58F78264CF4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexProject", "ComplexProject\ComplexProject.csproj", "{21DD87DD-9560-468C-84A1-7C89777C1427}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{091B48A1-2F1F-485C-9865-58F78264CF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{091B48A1-2F1F-485C-9865-58F78264CF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{091B48A1-2F1F-485C-9865-58F78264CF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21DD87DD-9560-468C-84A1-7C89777C1427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21DD87DD-9560-468C-84A1-7C89777C1427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21DD87DD-9560-468C-84A1-7C89777C1427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21DD87DD-9560-468C-84A1-7C89777C1427}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +36,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B4D40D45-EE37-48D2-93F9-01215EB2A6A1} = {921FAB13-150D-4C30-A34B-C87E23020A2D}
 		{091B48A1-2F1F-485C-9865-58F78264CF4B} = {921FAB13-150D-4C30-A34B-C87E23020A2D}
+		{21DD87DD-9560-468C-84A1-7C89777C1427} = {921FAB13-150D-4C30-A34B-C87E23020A2D}
 	EndGlobalSection
 EndGlobal
