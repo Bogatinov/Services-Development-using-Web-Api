@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstWebApi2", "MyFirstWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessComplexWebApi", "LessComplexWebApi\LessComplexWebApi.csproj", "{091B48A1-2F1F-485C-9865-58F78264CF4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema", "Cinema\Cinema.csproj", "{D3FE288D-EC8F-4974-90A2-24B5B4D6A554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Tests", "Cinema.Tests\Cinema.Tests.csproj", "{3B4BDC3A-C9CD-4048-97B4-F0EEF0E696EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,14 @@ Global
 		{091B48A1-2F1F-485C-9865-58F78264CF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{091B48A1-2F1F-485C-9865-58F78264CF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{091B48A1-2F1F-485C-9865-58F78264CF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3FE288D-EC8F-4974-90A2-24B5B4D6A554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3FE288D-EC8F-4974-90A2-24B5B4D6A554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3FE288D-EC8F-4974-90A2-24B5B4D6A554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3FE288D-EC8F-4974-90A2-24B5B4D6A554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4BDC3A-C9CD-4048-97B4-F0EEF0E696EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4BDC3A-C9CD-4048-97B4-F0EEF0E696EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4BDC3A-C9CD-4048-97B4-F0EEF0E696EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4BDC3A-C9CD-4048-97B4-F0EEF0E696EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B4D40D45-EE37-48D2-93F9-01215EB2A6A1} = {921FAB13-150D-4C30-A34B-C87E23020A2D}
 		{091B48A1-2F1F-485C-9865-58F78264CF4B} = {921FAB13-150D-4C30-A34B-C87E23020A2D}
+		{D3FE288D-EC8F-4974-90A2-24B5B4D6A554} = {921FAB13-150D-4C30-A34B-C87E23020A2D}
+		{3B4BDC3A-C9CD-4048-97B4-F0EEF0E696EE} = {921FAB13-150D-4C30-A34B-C87E23020A2D}
 	EndGlobalSection
 EndGlobal
