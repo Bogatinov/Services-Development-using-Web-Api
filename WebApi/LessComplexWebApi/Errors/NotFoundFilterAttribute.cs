@@ -15,7 +15,8 @@ namespace LessComplexWebApi.Errors
                 {
                     ReasonPhrase = context.Exception.Message, // return the message you passed in the exception
                     Content = new StringContent("This is a problem"), // return Content that this is a problem
-                    RequestMessage = new HttpRequestMessage(context.Request.Method, context.Request.RequestUri) // return I wanted GET api/v1/goose/find/myName
+                    RequestMessage = new HttpRequestMessage(context.Request.Method, context.Request.RequestUri)
+                    // return I wanted GET api/v1/goose/find/myName
                 };
             }
         }
