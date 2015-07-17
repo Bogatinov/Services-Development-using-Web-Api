@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using LessComplexWebApi.Errors;
 
 namespace LessComplexWebApi
 {
