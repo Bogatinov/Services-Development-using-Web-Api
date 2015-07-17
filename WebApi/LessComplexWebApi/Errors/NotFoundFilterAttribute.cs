@@ -1,15 +1,20 @@
 ﻿using System;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using System.Net;
 using System.Net.Http;
 =======
 using System.Collections.Generic;
+=======
+>>>>>>> Fix bug with wrong exception log
 using System.Diagnostics;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
+<<<<<<< HEAD
 using System.Web;
 >>>>>>> Exception handling with G1
+=======
+>>>>>>> Fix bug with wrong exception log
 using System.Web.Http.Filters;
 
 namespace LessComplexWebApi.Errors
@@ -18,6 +23,7 @@ namespace LessComplexWebApi.Errors
     {
         public override void OnException(HttpActionExecutedContext context)
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (context.Exception is NullReferenceException) // what is your exception type
             {
@@ -28,6 +34,9 @@ namespace LessComplexWebApi.Errors
                     RequestMessage = new HttpRequestMessage(context.Request.Method, context.Request.RequestUri) // return I wanted GET api/v1/goose/find/myName
 =======
             if (context.Exception is ApplicationException)
+=======
+            if (context.Exception is NullReferenceException)
+>>>>>>> Fix bug with wrong exception log
             {
                 Trace.WriteLine(context.Exception.Message);
                 context.Response = new HttpResponseMessage(HttpStatusCode.NotFound)
