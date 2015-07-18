@@ -15,6 +15,7 @@ Feel free to contact me via [email](mailto:bogatinov@outlook.com?Subject=SEDC%20
 Useful links and great learning material for this course
 
 ##Channel9 Videos
+ * [Web Api Design](https://channel9.msdn.com/Series/Web-API-Design)
  * [Visual Studio Features](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview)
 
 ##WebApi 2
