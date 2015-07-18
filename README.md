@@ -6,3 +6,7 @@ Feel free to contact me via [email](mailto:bogatinov@outlook.com?Subject=SEDC%20
 
 #Literature
 Watch videos at [Channel9](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview)
+
+##Entity Framework Code First
+https://msdn.microsoft.com/en-us/data/hh134698.aspx
+https://msdn.microsoft.com/en-us/data/jj591620.aspx
