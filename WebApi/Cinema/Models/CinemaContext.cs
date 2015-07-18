@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace Cinema.Models
@@ -23,6 +24,12 @@ namespace Cinema.Models
             modelBuilder.Entity<Movie>().HasMany(m => m.Tickets)
                 .WithRequired(t => t.Movie)
                 .HasForeignKey(t => t.MovieId);
+        }
+
+        public async Task CreateMovie(Movie movie)
+        {
+            this.Movies.Add(movie);
+            await this.SaveChangesAsync();
         }
     }
 }

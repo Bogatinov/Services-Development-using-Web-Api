@@ -14,6 +14,7 @@ namespace Cinema.Controllers
             1. Buy ticket
             2. Buy popcorn
             3. Buy soda
+            4. Write tests for each method in Cinema.Tests
          */
     }
 }
