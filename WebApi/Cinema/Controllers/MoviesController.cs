@@ -80,8 +80,7 @@ namespace Cinema.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Movies.Add(movie);
-            await db.SaveChangesAsync();
+            await db.CreateMovie(movie);
 
             return CreatedAtRoute("DefaultApi", new { id = movie.Id }, movie);
         }

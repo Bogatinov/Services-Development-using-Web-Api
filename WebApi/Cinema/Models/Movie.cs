@@ -17,7 +17,10 @@ namespace Cinema.Models
         }
 
         [Key]
-        public int Id { get; set; } 
+        public int Id { get; set; }
+        [Required]
+        [StringLength(50)]
+        [MinLength(5)]
         public string Name { get; set; }
         public double Rating { get; set; }
         public ICollection<Ticket> Tickets { get; set; }
