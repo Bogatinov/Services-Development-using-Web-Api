@@ -3,3 +3,6 @@ Content from courses projects and demos with [Aleksandar Bogatinov](//twitter.co
 
 #Have questions?
 Feel free to contact me via [email](mailto:bogatinov@outlook.com?Subject=SEDC%20WebApi2) or Twitter.
+
+#Literature
+Watch videos at [Channel9](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview)
