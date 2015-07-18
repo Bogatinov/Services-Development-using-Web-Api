@@ -26,10 +26,9 @@ Visual Studio Features [Channel9](https://channel9.msdn.com/Series/Visual-Studio
  * [Testing and Debugging](http://www.asp.net/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api)
 
 ##Entity Framework Code First
-* Relationship with Fluent api 
-   - https://msdn.microsoft.com/en-us/data/hh134698.aspx
-   - https://msdn.microsoft.com/en-us/data/jj591620.aspx
-   - 
+* [Code First Relationships Fluent API](https://msdn.microsoft.com/en-us/data/hh134698.aspx)
+* [Configuring Relationships with the Fluent API](https://msdn.microsoft.com/en-us/data/jj591620.aspx)
+   
 ## Angular
  * [Modular example for large scale applications](https://github.com/johnpapa/ng-demos/tree/master/modular)
  * [Simple WebApi 2 + Angular application](https://github.com/AzureADSamples/SinglePageApp-WebAPI-AngularJS-DotNet)
