@@ -9,4 +9,5 @@ Watch videos at [Channel9](https://channel9.msdn.com/Series/Visual-Studio-2012-P
 
 ##Entity Framework Code First
 https://msdn.microsoft.com/en-us/data/hh134698.aspx
+
 https://msdn.microsoft.com/en-us/data/jj591620.aspx
