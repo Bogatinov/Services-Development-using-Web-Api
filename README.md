@@ -15,9 +15,27 @@ Feel free to contact me via [email](mailto:bogatinov@outlook.com?Subject=SEDC%20
 Useful links and great learning material for this course
 
 ##Channel9 Videos
-Watch videos at [Channel9](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview)
+Visual Studio Features [Channel9](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview)
+
+##WebApi 2
+ * [Getting started](http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api) 
+ * [Routing](http://www.asp.net/web-api/overview/web-api-routing-and-actions) 
+ * [Entity Framework + WebApi 2](http://www.asp.net/web-api/overview/data/using-web-api-with-entity-framework/part-1)
+ * [Exception handling](http://www.asp.net/web-api/overview/error-handling/exception-handling)
+ * [Tracing](http://www.asp.net/web-api/overview/testing-and-debugging/tracing-in-aspnet-web-api)
+ * [Testing and Debugging](http://www.asp.net/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api)
 
 ##Entity Framework Code First
-https://msdn.microsoft.com/en-us/data/hh134698.aspx
+* Relationship with Fluent api 
+   - https://msdn.microsoft.com/en-us/data/hh134698.aspx
+   - https://msdn.microsoft.com/en-us/data/jj591620.aspx
+   - 
+## Angular
+ * [Modular example for large scale applications](https://github.com/johnpapa/ng-demos/tree/master/modular)
+ * [Simple WebApi 2 + Angular application](https://github.com/AzureADSamples/SinglePageApp-WebAPI-AngularJS-DotNet)
+ * [Angular Styleguide for building large scale applications](https://github.com/johnpapa/angular-styleguide)
 
-https://msdn.microsoft.com/en-us/data/jj591620.aspx
+## Workflow
+ * [Basics of working with Git](http://git-scm.com/doc)
+ * [Visual Studio Keyboard Shortcuts, Speed up your programming](http://visualstudioshortcuts.com/2013/)
+ * [Learning Test Driven Development](https://github.com/garora/TDD-Katas)
