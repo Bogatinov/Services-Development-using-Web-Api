@@ -11,7 +11,7 @@ namespace Cinema.Models
 {
     public class CinemaContext : DbContext
     {
-        public CinemaContext() : base("CinemaContext")
+        public CinemaContext() : base("CinemaDB")
         {
 
         }
@@ -23,9 +23,10 @@ namespace Cinema.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Movie>().HasMany(m => m.Tickets)
-                .WithRequired(t => t.Movie)
-                .HasForeignKey(t => t.MovieId);
+            modelBuilder.Entity<Movie>()
+                .HasRequired(m => m.Ticket)
+                .WithRequiredPrincipal()
+                .WillCascadeOnDelete(true);
         }
 
         public async Task CreateMovie(Movie movie)

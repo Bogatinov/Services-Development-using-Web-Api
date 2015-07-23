@@ -20,25 +20,23 @@ namespace Cinema.Tests.Controllers
         {
             //Arrange
             var controller = new MoviesController();
-            var movieName = "Lord of the Rings";
-            var movie = new Movie()
+            var movieName = "Superman";
+            var movie = new Movie
             {
                 Name = movieName,
-                Rating = 11
+                Rating = 11,
+                Ticket = new Ticket()
+                {
+                    Price = 0.99
+                }
             };
-            movie.Tickets.Add(new Ticket()
-            {
-                Price = 0.99
-            });
-            movie.Tickets.Add(new Ticket()
-            {
-                Price = 1.99
-            });
 
             var actionResult = await controller.PostMovie(movie)
                                as CreatedAtRouteNegotiatedContentResult<Movie>;
 
             Assert.AreEqual(movieName, actionResult.Content.Name);
+
+            await controller.DeleteMovie(movieName);
         }
 
         [TestMethod]
@@ -49,22 +47,20 @@ namespace Cinema.Tests.Controllers
             var controller = new MoviesController();
             var movie = new Movie()
             {
-                Name = "Lord of the Rings",
+                Name = "Superman",
                 Rating = 11
             };
-            movie.Tickets.Add(new Ticket()
+            movie.Ticket = new Ticket()
             {
                 Price = 0.99
-            });
-            movie.Tickets.Add(new Ticket()
-            {
-                Price = 1.99
-            });
+            };
             await controller.PostMovie(movie);
 
-            var actionResult = await controller.DeleteMovie(movie.Id);
+            var actionResult = await controller.DeleteMovie(movie.Name);
             
             Assert.IsInstanceOfType(actionResult, typeof(OkNegotiatedContentResult<Movie>));
+
+            await controller.DeleteMovie(movie.Name);
         }
 
         [TestMethod]
@@ -72,9 +68,9 @@ namespace Cinema.Tests.Controllers
         public async Task CanNotDeleteNotExistingMovie()
         {
             var controller = new MoviesController();
-            var movieId = 42;
+            var movieName = "SomeRandomMovieYouWillNeverBeAbleToFind";
 
-            var actionResult = await controller.DeleteMovie(movieId);
+            var actionResult = await controller.DeleteMovie(movieName);
 
             Assert.IsInstanceOfType(actionResult, typeof(NotFoundResult));
         }
