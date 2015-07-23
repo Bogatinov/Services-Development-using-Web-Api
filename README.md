@@ -28,10 +28,10 @@ Content from courses projects and demos with [Aleksandar Bogatinov](//twitter.co
 	- See upcoming movies
 
 
-###Required
+####Required
   - Write tests for each scenario
 
-###Optional
+####Optional
   - Integrate ONION with Web Api
 
 
