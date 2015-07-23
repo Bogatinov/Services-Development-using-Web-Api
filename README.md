@@ -2,11 +2,39 @@
 Content from courses projects and demos with [Aleksandar Bogatinov](//twitter.com/WpXAce)
 
 #Homework
-1. ShopController
-  * Buy ticket
-  * Buy popcorn
-  * Buy soda
-  * Write tests for each (TDD style)
+1. As a user I want to be able to buy
+	- ticket
+	- popcorn
+	- soda
+
+2. As a user, when I buy a ticket
+	- and it is Wednesday before 18.09.2015, I will have 30% discount
+	- and it is Friday before 15.09.2015, I will get free popcorn
+
+3. As a user, when I buy more than 4 tickets
+	- and it is Monday before 10.09.2015, I will get 2 free sodas
+	- and it is Friday before 15.09.2015, I will get 20% discount
+
+**NOTE**: Different rules apply for point 2 and point 3, *they do not stack*
+
+4. As a user, when I spend
+	- More than 1500 mkd, I will get additional free soda
+	- More than 1700 mkd, I will get 2 additional free sodas
+	- More than 1900 mkd, I will get 2 additional free sodas and free large popcorn
+
+5. As a user, I want to
+	- See my invoices
+	- See latest movies
+	- See upcoming movies
+
+
+###Required
+  - Write tests for each scenario
+
+###Optional
+  - Integrate ONION with Web Api
+
+
 
 #Have questions?
 Feel free to contact me via [email](mailto:bogatinov@outlook.com?Subject=SEDC%20WebApi2) or Twitter.
