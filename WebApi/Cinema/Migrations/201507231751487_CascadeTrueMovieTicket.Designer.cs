@@ -7,13 +7,13 @@ namespace Cinema.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class MovieNameRequiredWithRangeFrom1To100Chars : IMigrationMetadata
+    public sealed partial class CascadeTrueMovieTicket : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(MovieNameRequiredWithRangeFrom1To100Chars));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CascadeTrueMovieTicket));
         
         string IMigrationMetadata.Id
         {
-            get { return "201507181346434_MovieNameRequiredWithRangeFrom1To100Chars"; }
+            get { return "201507231751487_CascadeTrueMovieTicket"; }
         }
         
         string IMigrationMetadata.Source

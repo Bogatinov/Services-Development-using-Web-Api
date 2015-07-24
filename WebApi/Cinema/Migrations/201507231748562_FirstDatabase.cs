@@ -12,9 +12,10 @@ namespace Cinema.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Liters = c.Double(nullable: false),
                         Name = c.String(),
                         Price = c.Double(nullable: false),
-                        Liters = c.Double(nullable: false),
+                        Quantity = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -23,8 +24,10 @@ namespace Cinema.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Weight = c.Double(nullable: false),
                         Name = c.String(),
                         Price = c.Double(nullable: false),
+                        Quantity = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -32,11 +35,10 @@ namespace Cinema.Migrations
                 "dbo.Movies",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false, maxLength: 50),
                         Rating = c.Double(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Name);
             
             CreateTable(
                 "dbo.Tickets",
@@ -44,18 +46,19 @@ namespace Cinema.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Price = c.Double(nullable: false),
-                        MovieId = c.Int(nullable: false),
+                        Quantity = c.Int(nullable: false),
+                        Movie_Name = c.String(nullable: false, maxLength: 50),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Movies", t => t.MovieId, cascadeDelete: true)
-                .Index(t => t.MovieId);
+                .ForeignKey("dbo.Movies", t => t.Movie_Name)
+                .Index(t => t.Movie_Name);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Tickets", "MovieId", "dbo.Movies");
-            DropIndex("dbo.Tickets", new[] { "MovieId" });
+            DropForeignKey("dbo.Tickets", "Movie_Name", "dbo.Movies");
+            DropIndex("dbo.Tickets", new[] { "Movie_Name" });
             DropTable("dbo.Tickets");
             DropTable("dbo.Movies");
             DropTable("dbo.Foods");

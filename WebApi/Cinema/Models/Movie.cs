@@ -11,18 +11,12 @@ namespace Cinema.Models
     [Table("Movies")]
     public class Movie
     {
-        public Movie()
-        {
-            Tickets = new HashSet<Ticket>();
-        }
-
-        [Key]
-        public int Id { get; set; }
         [Required]
         [StringLength(50)]
         [MinLength(5)]
+        [Key]
         public string Name { get; set; }
         public double Rating { get; set; }
-        public ICollection<Ticket> Tickets { get; set; }
+        public Ticket Ticket { get; set; }
     }
 }

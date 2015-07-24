@@ -150,23 +150,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507161815583_FirstDatabase.cs" />
-    <Compile Include="Migrations\201507161815583_FirstDatabase.Designer.cs">
-      <DependentUpon>201507161815583_FirstDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\201507231748562_FirstDatabase.cs" />
+    <Compile Include="Migrations\201507231748562_FirstDatabase.Designer.cs">
+      <DependentUpon>201507231748562_FirstDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507181346434_MovieNameRequiredWithRangeFrom1To100Chars.cs" />
-    <Compile Include="Migrations\201507181346434_MovieNameRequiredWithRangeFrom1To100Chars.Designer.cs">
-      <DependentUpon>201507181346434_MovieNameRequiredWithRangeFrom1To100Chars.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201507181355524_MovieNameLength.cs" />
-    <Compile Include="Migrations\201507181355524_MovieNameLength.Designer.cs">
-      <DependentUpon>201507181355524_MovieNameLength.cs</DependentUpon>
+    <Compile Include="Migrations\201507231751487_CascadeTrueMovieTicket.cs" />
+    <Compile Include="Migrations\201507231751487_CascadeTrueMovieTicket.Designer.cs">
+      <DependentUpon>201507231751487_CascadeTrueMovieTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CinemaContext.cs" />
     <Compile Include="Models\Drink.cs" />
     <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\ShopItem.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,19 +213,16 @@
     <Content Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201507161815583_FirstDatabase.resx">
-      <DependentUpon>201507161815583_FirstDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507181346434_MovieNameRequiredWithRangeFrom1To100Chars.resx">
-      <DependentUpon>201507181346434_MovieNameRequiredWithRangeFrom1To100Chars.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507181355524_MovieNameLength.resx">
-      <DependentUpon>201507181355524_MovieNameLength.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201507231748562_FirstDatabase.resx">
+      <DependentUpon>201507231748562_FirstDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507231751487_CascadeTrueMovieTicket.resx">
+      <DependentUpon>201507231751487_CascadeTrueMovieTicket.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
