@@ -36,20 +36,24 @@ namespace Cinema.Controllers
                     if (DateTime.Now.DayOfWeek == DayOfWeek.Friday && DateTime.Now <= new DateTime(2015, 9, 15))
                     {
                         var popcorn = await _db.Foods.FirstOrDefaultAsync(f => f.Name == "popcorn");
-                        popcorn.Quantity--;
-                        
-                        var newPopcorn = invoice.Items.FirstOrDefault(i => i.Id == popcorn.Id);
-                        if (newPopcorn != null)
-                            newPopcorn.Quantity++;
-                        
-                        newPopcorn = new Food()
+                        if (popcorn != null)
                         {
-                            Name = "popcorn",
-                            Price = 0,
-                            Weight = popcorn.Weight,
-                            Quantity = 1
-                        };
-                        invoice.Items.Add(newPopcorn);
+                            popcorn.Quantity--;
+
+                            var newPopcorn = invoice.Items.FirstOrDefault(i => i.Id == popcorn.Id);
+                            if (newPopcorn != null)
+                                newPopcorn.Quantity++;
+
+                            newPopcorn = new Food()
+                            {
+                                Name = "popcorn",
+                                Price = 0,
+                                Weight = popcorn.Weight,
+                                Quantity = 1
+                            };
+                            invoice.Items.Add(newPopcorn);
+                        }
+                        
                     }
                     if (DateTime.Now <= new DateTime(2015, 09, 18) &&
                         DateTime.Now.DayOfWeek == DayOfWeek.Wednesday)

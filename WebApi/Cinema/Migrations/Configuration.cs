@@ -15,7 +15,6 @@ namespace Cinema.Migrations
 
         protected override void Seed(Cinema.Models.CinemaContext context)
         {
-            
         }
     }
 }
